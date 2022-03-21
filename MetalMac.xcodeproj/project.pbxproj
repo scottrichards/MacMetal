@@ -11,6 +11,7 @@
 		012F601327E4E3380022BB06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012F601227E4E3380022BB06 /* ViewController.swift */; };
 		012F601527E4E33A0022BB06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012F601427E4E33A0022BB06 /* Assets.xcassets */; };
 		012F601827E4E33A0022BB06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 012F601627E4E33A0022BB06 /* Main.storyboard */; };
+		012F602027E4F65A0022BB06 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 012F601F27E4F65A0022BB06 /* Shaders.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		012F601427E4E33A0022BB06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		012F601727E4E33A0022BB06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		012F601927E4E33A0022BB06 /* MetalMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MetalMac.entitlements; sourceTree = "<group>"; };
+		012F601F27E4F65A0022BB06 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		012F600F27E4E3380022BB06 /* MetalMac */ = {
 			isa = PBXGroup;
 			children = (
+				012F601F27E4F65A0022BB06 /* Shaders.metal */,
 				012F601027E4E3380022BB06 /* AppDelegate.swift */,
 				012F601227E4E3380022BB06 /* ViewController.swift */,
 				012F601427E4E33A0022BB06 /* Assets.xcassets */,
@@ -131,6 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012F602027E4F65A0022BB06 /* Shaders.metal in Sources */,
 				012F601327E4E3380022BB06 /* ViewController.swift in Sources */,
 				012F601127E4E3380022BB06 /* AppDelegate.swift in Sources */,
 			);
@@ -277,6 +281,7 @@
 				DEVELOPMENT_TEAM = GX77HU5247;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -304,6 +309,7 @@
 				DEVELOPMENT_TEAM = GX77HU5247;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
