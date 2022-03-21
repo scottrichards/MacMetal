@@ -20,25 +20,10 @@ class ViewController: NSViewController {
     var vertexBuffer: MTLBuffer!
     var pipelineState: MTLRenderPipelineState!
     var commandQueue: MTLCommandQueue!
-//    var timer: CADisplayLink!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
-        // CVDisplayLink attempt
-//        let displayID = CGMainDisplayID()
-//        var error: CVReturn?
-//        error = CVDisplayLinkCreateWithCGDisplay(displayID, &displayLink);
-//        if error != nil
-//        {
-//            print("DisplayLink created with error: \(error)");
-//            displayLink = NULL;
-//        }
-//        CVDisplayLinkSetOutputCallback(displayLink, renderCallback, (__bridge void *)self);
-        
-//        timer = CADisplayLink(target: self, selector: #selector(gameloop))
-//        timer.add(to: RunLoop.main, forMode: .default)
+
     }
     
     override func viewDidAppear() {
@@ -80,7 +65,7 @@ class ViewController: NSViewController {
         
         commandQueue = device.makeCommandQueue()
   
-        Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(gameloop), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(drawTriangle), userInfo: nil, repeats: true)
     }
     
     func render() {
@@ -102,24 +87,13 @@ class ViewController: NSViewController {
         commandBuffer.commit()
     }
     
-    @objc func gameloop() {
+    @objc func drawTriangle() {
         autoreleasepool {
             self.render()
         }
     }
-    //
-    //    override func viewDidLoad() {
-    //        super.viewDidLoad()
-    //
-    //        // Do any additional setup after loading the view.
-    //    }
-    //
-    //    override var representedObject: Any? {
-    //        didSet {
-    //        // Update the view, if already loaded.
-    //        }
-    //    }
-    //
+
+
     
 }
 
